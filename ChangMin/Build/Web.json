@@ -1,6 +1,6 @@
 {
 "companyName": "DefaultCompany",
-"productName": "ET",
+"productName": "TriFunction",
 "dataUrl": "Web.data.unityweb",
 "wasmCodeUrl": "Web.wasm.code.unityweb",
 "wasmFrameworkUrl": "Web.wasm.framework.unityweb",
