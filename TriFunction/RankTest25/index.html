@@ -10,6 +10,7 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json", {onProgress: UnityProgress});
+      SendMessage('EC', "SetUserData", "{}");
     </script>
   </head>
   <body>
