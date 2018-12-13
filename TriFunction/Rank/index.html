@@ -6,19 +6,7 @@
     <title>Unity WebGL Player | TriFunction</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json");
-        //TODO set real data from quebon.tv web
-        var data = {
-            host: "https://dev-api.quebon.tv",
-            userid: "8050320605186",
-            nickname: "test",
-            token: "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDQxMjQ3NjUsInR5cGUiOiJJTkRWIiwiaWQiOiIxMDY4MTgzOTUxNzY5NjAyIiwic2Vzc2lvbklkIjoiOTcyMWZlOTktZTk1Ny00YWJhLWFjYWMtYzY4NGZlYmFiZmE0IiwiYXV0aExldmVsIjoxLCJyb2xlcyI6W10sInN1YnNjcmlwdGlvbiI6eyJzdWJzY3JpcHRpb25JZCI6IjEzMDc4NTYxMzkyNTc4NTkiLCJlbmREYXRlIjoiMjAxOC0xMi0yNiIsImFjdGl2ZSI6dHJ1ZX0sInJlYWRPbmx5IjpmYWxzZSwiaWF0IjoxNTQ0MTAzMTY2fQ.E-XlBadiin5DukU6FvsSOgZT73g4FAbSZOmNPwWJtV0"
-        };
-        //Send message to unity
-        var SetUserData = function() {
-            console.log("SET called")
-            gameInstance.SendMessage("EC", "SetUserData", JSON.stringify(data));
-        }
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json");
     </script>
   </head>
   <body>
