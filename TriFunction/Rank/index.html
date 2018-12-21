@@ -6,22 +6,24 @@
     <title>Unity WebGL Player | TriFunction</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json");
-        //TODO set real data from quebon.tv web
-        var data = {
-            host: "https://dev-api.quebon.tv",
-            userid: "1343204322443265",
-            nickname: "test",
-            token: "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDUzMTQ5NzIsInR5cGUiOiJJTkRWIiwiaWQiOiIxMzQzMjA0MzIyNDQzMjY1Iiwic2Vzc2lvbklkIjoiNjQzYjFhMjctOTMwMi00OTIzLThhYTgtNDdlNDIzMjY2ZWYyIiwiYXV0aExldmVsIjoxLCJyb2xlcyI6W10sInN1YnNjcmlwdGlvbiI6eyJzdWJzY3JpcHRpb25JZCI6IjE0MDgzMzIzNjA1NjU3NjIiLCJlbmREYXRlIjoiMjAxOS0wMS0xMCIsImFjdGl2ZSI6dHJ1ZX0sInJlYWRPbmx5IjpmYWxzZSwiaWF0IjoxNTQ1MjkzMzcyfQ.93IzIWKwOpIOT-PpKlvy9IfWHMZhNeSxaHosZWWEjfI"
-        };
-        //Send message to unity
-        var SetUserData = function() {
-            console.log("SET called")
-            gameInstance.SendMessage("EC", "SetUserData", JSON.stringify(data));
-        }
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/aa.json");
+      //TODO set real data from quebon.tv web
+      var data = {
+        host: "https://dev-api.quebon.tv",
+        userid: "1343204322443265",
+        nickname: "test",
+        token: "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDUzMTQ5NzIsInR5cGUiOiJJTkRWIiwiaWQiOiIxMzQzMjA0MzIyNDQzMjY1Iiwic2Vzc2lvbklkIjoiNjQzYjFhMjctOTMwMi00OTIzLThhYTgtNDdlNDIzMjY2ZWYyIiwiYXV0aExldmVsIjoxLCJyb2xlcyI6W10sInN1YnNjcmlwdGlvbiI6eyJzdWJzY3JpcHRpb25JZCI6IjE0MDgzMzIzNjA1NjU3NjIiLCJlbmREYXRlIjoiMjAxOS0wMS0xMCIsImFjdGl2ZSI6dHJ1ZX0sInJlYWRPbmx5IjpmYWxzZSwiaWF0IjoxNTQ1MjkzMzcyfQ.93IzIWKwOpIOT-PpKlvy9IfWHMZhNeSxaHosZWWEjfI"
+      };
+      //Send message to unity
+      var SetUserData = function() {
+          console.log("SET called")
+          gameInstance.SendMessage("EC", "SetUserData", JSON.stringify(data));
+      }
     </script>
   </head>
   <body>
-    <div id="gameContainer" style="width: 1080px; height: 675px; margin: auto"></div>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 1080px; height: 675px"></div>
+    </div>
   </body>
 </html>
