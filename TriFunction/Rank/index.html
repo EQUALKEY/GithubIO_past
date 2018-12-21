@@ -6,11 +6,7 @@
     <title>Unity WebGL Player | TriFunction</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var onProgress = function(i, e) {
-        UnityProgress(i, e);
-        console.log(e);
-      }
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/aa.json", {onProgress: onProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/aa.json");
       //TODO set real data from quebon.tv web
       var data = {
         host: "https://dev-api.quebon.tv",
