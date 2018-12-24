@@ -6,13 +6,13 @@
     <title>Unity WebGL Player | TriFunction</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/aa.json");
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json");
       //TODO set real data from quebon.tv web
       var data = {
-        host: "https://dev-api.quebon.tv",
-        userid: "1343204322443265",
-        nickname: "test",
-        token: "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDUzMTQ5NzIsInR5cGUiOiJJTkRWIiwiaWQiOiIxMzQzMjA0MzIyNDQzMjY1Iiwic2Vzc2lvbklkIjoiNjQzYjFhMjctOTMwMi00OTIzLThhYTgtNDdlNDIzMjY2ZWYyIiwiYXV0aExldmVsIjoxLCJyb2xlcyI6W10sInN1YnNjcmlwdGlvbiI6eyJzdWJzY3JpcHRpb25JZCI6IjE0MDgzMzIzNjA1NjU3NjIiLCJlbmREYXRlIjoiMjAxOS0wMS0xMCIsImFjdGl2ZSI6dHJ1ZX0sInJlYWRPbmx5IjpmYWxzZSwiaWF0IjoxNTQ1MjkzMzcyfQ.93IzIWKwOpIOT-PpKlvy9IfWHMZhNeSxaHosZWWEjfI"
+          host: "https://dev-api.quebon.tv",
+          userid: "1343204322443265",
+          nickname: "test",
+          token: "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDU2MzI1NzQsInR5cGUiOiJJTkRWIiwiaWQiOiIxMzQzMjA0MzIyNDQzMjY1Iiwic2Vzc2lvbklkIjoiZjdjZDk2ZjItYzZkOC00Y2I2LTk0OTctNTBkYzIwNGIzNjUyIiwiYXV0aExldmVsIjoxLCJyb2xlcyI6W10sInN1YnNjcmlwdGlvbiI6eyJzdWJzY3JpcHRpb25JZCI6IjE0MDgzMzIzNjA1NjU3NjIiLCJlbmREYXRlIjoiMjAxOS0wMS0xMCIsImFjdGl2ZSI6dHJ1ZX0sInJlYWRPbmx5IjpmYWxzZSwiaWF0IjoxNTQ1NjEwOTc0fQ.Ca665JGAL0MBX6R2o2JGDFLMHPfgoh6xXXifTqg76dA"
       };
       //Send message to unity
       var SetUserData = function() {
@@ -22,8 +22,6 @@
     </script>
   </head>
   <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 1080px; height: 675px"></div>
-    </div>
+    <div id="gameContainer" style="width: 1080px; height: 675px; margin: auto"></div>
   </body>
 </html>
