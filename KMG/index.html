@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | KMG</title>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json");
+      //TODO set real data from quebon.tv web
+      var data = {
+          host: "https://dev-api.quebon.tv",
+          userid: "1343204322443265",
+          nickname: "test",
+          token: "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDU4MDgwNjQsInR5cGUiOiJJTkRWIiwiaWQiOiIxMzQzMjA0MzIyNDQzMjY1Iiwic2Vzc2lvbklkIjoiNTViNjA2M2QtZTZjZC00ZTVhLWJmODAtZjEwM2E5YjVlZjcyIiwiYXV0aExldmVsIjoxLCJyb2xlcyI6W10sInN1YnNjcmlwdGlvbiI6eyJzdWJzY3JpcHRpb25JZCI6IjE0MDgzMzIzNjA1NjU3NjIiLCJlbmREYXRlIjoiMjAxOS0wMS0xMCIsImFjdGl2ZSI6dHJ1ZX0sInJlYWRPbmx5IjpmYWxzZSwiaWF0IjoxNTQ1Nzg2NDY0fQ.UxWmucGgWxewgs6UmTvTPRk7GplkPGAKPPYu2TJKZGQ"
+      };
+      //Send message to unity
+      var SetUserData = function() {
+          console.log("SET called")
+          gameInstance.SendMessage("DontDestroyThis", "SetUserData", JSON.stringify(data));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="gameContainer" style="width: 1080px; height: 675px; margin: auto"></div>
+  </body>
+</html>
